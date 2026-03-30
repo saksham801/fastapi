@@ -3,6 +3,5 @@ main = "main.py"
 compatibility_date = "2026-03-30"
 compatibility_flags = ["python_workers"]
 
-# Try this specific header format
-[python_worker]
-enabled = true
+[python]
+# No fields needed here, just the header.
