@@ -1,16 +1,11 @@
 from fastapi import FastAPI
-import sys
 
 app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {
-        "message": "Hello from Cloudflare Workers!",
-        "python_version": sys.version,
-        "fastapi_status": "loaded"
-    }
+    return {"status": "success", "message": "FastAPI is running on the Edge!"}
 
-@app.get("/test")
-async def test():
-    return {"status": "success"}
+# Cloudflare looks for this specific entry point
+async def on_fetch(request, env):
+    return await app(request, env)

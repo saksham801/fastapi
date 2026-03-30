@@ -3,5 +3,6 @@ main = "main.py"
 compatibility_date = "2026-03-30"
 compatibility_flags = ["python_workers"]
 
-[python]
-# No fields needed here, just the header.
+# We use the 'vars' method to force Wrangler to see the requirements file
+[vars]
+PIP_REQUIREMENTS_PATH = "requirements.txt"
