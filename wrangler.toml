@@ -1,7 +1,7 @@
-name = "my-fastapi-app"
-main = "fastapi"
+name = "my-fastapi-worker"
+main = "main.py"
 compatibility_date = "2026-03-30"
-compatibility_flags = [ "python_workers" ]
+compatibility_flags = ["python_workers"]
 
 [python]
-# This section remains empty but is required to trigger the Python build
+# This must stay here to enable the Python runtime
