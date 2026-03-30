@@ -3,6 +3,7 @@ main = "main.py"
 compatibility_date = "2026-03-30"
 compatibility_flags = ["python_workers"]
 
-# This is likely where the error is.
-# Ensure there are NO spaces or tabs inside this section.
-[python]
+# We define the version here instead of a [python] block
+# to avoid the "Unexpected fields" warning.
+[vars]
+PIP_REQUIREMENTS_PATH = "requirements.txt"
