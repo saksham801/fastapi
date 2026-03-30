@@ -1,0 +1,9 @@
+name = "myapp"
+main = "main.py"
+compatibility_date = "2024-03-31"
+
+[python_runtime]
+# Use the Python runtime
+# See https://developers.cloudflare.com/workers/languages/python/
+# Cloudflare Workers currently supports Python 3.11
+# Note: FastAPI is supported natively in the Python runtime.
