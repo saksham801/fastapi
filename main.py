@@ -4,8 +4,8 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"status": "success", "message": "FastAPI is running on the Edge!"}
+    return {"message": "Success"}
 
-# Cloudflare looks for this specific entry point
+# This is the ONLY way Cloudflare knows how to talk to FastAPI
 async def on_fetch(request, env):
     return await app(request, env)
