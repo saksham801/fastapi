@@ -1,11 +1,16 @@
 from fastapi import FastAPI
+import sys
 
 app = FastAPI()
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+async def root():
+    return {
+        "message": "Hello from Cloudflare Workers!",
+        "python_version": sys.version,
+        "fastapi_status": "loaded"
+    }
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/test")
+async def test():
+    return {"status": "success"}

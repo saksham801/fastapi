@@ -3,7 +3,6 @@ main = "main.py"
 compatibility_date = "2026-03-30"
 compatibility_flags = ["python_workers"]
 
-# We define the version here instead of a [python] block
-# to avoid the "Unexpected fields" warning.
-[vars]
-PIP_REQUIREMENTS_PATH = "requirements.txt"
+# Try this specific header format
+[python_worker]
+enabled = true
